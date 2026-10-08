@@ -1,0 +1,305 @@
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-card: #141414;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --accent: #ff4d00;
+    --accent-glow: rgba(255, 77, 0, 0.5);
+    --accent-hover: #cc3d00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* Навигация */
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    background: rgba(10, 10, 10, 0.95);
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+/* Переключатель языков */
+.lang-switcher {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid #333;
+    color: var(--text-muted);
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    border-color: var(--accent);
+    color: var(--text-main);
+    background: rgba(255, 77, 0, 0.1);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* ФОНОМ СТАВИМ КОРОЛЯ СПРАВА */
+    background: url('bg.jpg') center right / cover no-repeat;
+    overflow: hidden;
+}
+
+/* Затемнение: слева темнее (для текста), справа светлее (для короля) */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(10, 10, 10, 1) 0%,
+            /* Слева полная чернота */
+            rgba(10, 10, 10, 0.85) 40%,
+            /* Середина */
+            rgba(10, 10, 10, 0.3) 70%,
+            /* Справа почти прозрачно */
+            transparent 100%);
+    z-index: 1;
+}
+
+/* КОНТЕЙНЕР ТЕКСТА: ЖЕСТКО СЛЕВА */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 550px;
+    /* Ограничиваем ширину текста */
+    margin-left: 5%;
+    /* ОТСТУП СЛЕВА - ГЛАВНОЕ ИЗМЕНЕНИЕ! */
+    margin-right: auto;
+    text-align: left;
+    /* Текст строго по левому краю */
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    /* Чуть меньше, чтобы точно влезло */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+/* Кнопки тоже прижимаем влево */
+.hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 450px;
+}
+
+/* Контент */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    /* НА ДЕСКТОПЕ ТЕКСТ СЛЕВА */
+    text-align: left;
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* Кнопки */
+.hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 18px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 77, 0, 0.4);
+    border: 1px solid transparent;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(255, 77, 0, 0.6);
+    background: var(--accent-hover);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ========================================= */
+/* ИСПРАВЛЕННЫЙ МОБИЛЬНЫЙ АДАПТИВ            */
+/* ========================================= */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 0 60px;
+
+        /* МАГИЯ ДЛЯ ТЕЛЕФОНА: */
+        /* 1. Сдвигаем фон чуть левее центра (40%), чтобы захватить короля */
+        /* 2. Уменьшаем масштаб (1.3), чтобы видеть больше картинки */
+        background-position: 40% center !important;
+        background-size: 130% auto !important;
+    }
+
+    .hero-overlay {
+        /* Градиент: слева темный для текста, справа прозрачный для короля */
+        background: linear-gradient(90deg,
+                rgba(10, 10, 10, 0.95) 0%,
+                rgba(10, 10, 10, 0.6) 50%,
+                transparent 100%) !important;
+    }
+
+    .hero-content {
+        /* Текст строго слева с отступом */
+        text-align: left !important;
+        margin: 0 !important;
+        padding-left: 20px !important;
+        /* Отступ от края экрана */
+        max-width: 100% !important;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        /* Компактный заголовок */
+        line-height: 1.2;
+        margin-bottom: 15px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+        opacity: 0.9;
+    }
+
+    /* Кнопки друг под другом, выровнены по левому краю */
+    .hero-buttons {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+        width: 100%;
+        max-width: 300px;
+        /* Ограничиваем ширину кнопок */
+        margin: 0 !important;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABREK: BMW & Mercedes Service</title>
+    <link rel="stylesheet" href="style.css?v=99">
+    <!-- Подключаем шрифт Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">ABREK <span class="accent">SERVICE</span></div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="tk">TK</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран (Hero) -->
+    <!-- Главный экран (Hero) -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 data-i18n="hero_title">Профессиональный ремонт BMW и Mercedes</h1>
+            <p data-i18n="hero_subtitle">Экспертная диагностика двигателя и ходовой части в Ашхабаде.</p>
+
+            <!-- Сетка кнопок (Grid) -->
+            <div class="hero-buttons">
+                <a href="#contacts" class="btn btn-primary" data-i18n="hero_btn">Записаться</a>
+                <a href="#services" class="btn btn-secondary" data-i18n="hero_btn_2">Наши услуги</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Услуги -->
+    <section class="services section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services_title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🔧</div>
+                    <h3 data-i18n="serv_1_title">Ремонт двигателя</h3>
+                    <p data-i18n="serv_1_desc">Капитальный ремонт, замена ГРМ, устранение масложора для BMW и Mercedes.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🛞</div>
+                    <h3 data-i18n="serv_2_title">Ходовая часть</h3>
+                    <p data-i18n="serv_2_desc">Диагностика подвески, замена рычагов, амортизаторов и развал-схождение.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💻</div>
+                    <h3 data-i18n="serv_3_title">Компьютерная диагностика</h3>
+                    <p data-i18n="serv_3_desc">Чтение ошибок дилерским оборудованием, адаптация узлов и агрегатов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и Карта -->
+    <section id="contacts" class="contacts section">
+        <div class="container contacts-wrapper">
+            <div class="contact-info">
+                <h2 class="section-title" data-i18n="contacts_title">Контакты</h2>
+                <p class="phone">
+                    📞 <strong>Телефон:</strong><br>
+                    <a href="tel:+99364953313">+993 64 95-33-13</a>
+                </p>
+                <p class="hours">
+                    <strong data-i18n="hours_label">Режим работы:</strong><br>
+                    Пн-Сб: 09:00 – 19:00
+                </p>
+            </div>
+            <div class="map-container">
+                <!-- Вставь сюда реальную ссылку на Google Maps территории Таймаз -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.5!2d58.1961576!3d38.0301844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f7aa8aebcea5175%3A0x543adb9ba33f4c10!2z0JDRiNGF0LDQsdCw0LQsINCi0YPRgNC60LzQtdC90LjRgdGC0LDQvQ!5e0!3m2!1sru!2stm!4v1700000000000!5m2!1sru!2stm"
+                        width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ABREK: BMW & Mercedes Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
