@@ -3,9 +3,7 @@
 Премиальный лендинг для автосервиса BMW & Mercedes в Ашхабаде. Современный дизайн в темных тонах, полная адаптивность под мобильные устройства и интерактивная карта.
 
 ## 🌐 Live Demo
- **[Открыть сайт](https://aleksshaparyuk.github.io/abrek-service/)**  
-*(Замени эту ссылку на свою реальную ссылку с GitHub Pages!)*
-
+ https://aleksshaparyuk.github.io/abrek-service/
 ## ✨ Особенности проекта
 - **Dark UI Design:** Стильный темный интерфейс с огненными акцентами.
 - **Мультиязычность:** Переключение между TK / RU / EN без перезагрузки страницы (Vanilla JS).
@@ -20,7 +18,6 @@
 - Google Fonts (Inter)
 
 ## 📸 Скриншоты
-*(Сюда можно потом добавить скриншот сайта, если захочешь)*
 
 ---
 Made with 🔥 by [Aleks Shaparyuk](https://github.com/aleksshaparyuk)
